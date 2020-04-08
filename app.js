@@ -10,7 +10,7 @@ var http = require('http'),
     mongoose = require('mongoose');
 
 var isProduction = process.env.NODE_ENV === 'production';
-
+process.env.NODE_ENV = "develop"
 console.log('process.env.NODE_ENV=',process.env.NODE_ENV)
 // Create global app object
 var app = express();
