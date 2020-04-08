@@ -11,6 +11,7 @@ var http = require('http'),
 
 var isProduction = process.env.NODE_ENV === 'production';
 
+console.log('process.env.NODE_ENV=',process.env.NODE_ENV)
 // Create global app object
 var app = express();
 
