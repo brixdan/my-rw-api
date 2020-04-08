@@ -14,8 +14,9 @@ var isProduction = process.env.NODE_ENV === 'production';
 // Create global app object
 var app = express();
 
+
 // good for local api, no good for heroku
-// app.use(cors());
+//    app.use(cors());
 
 // Normal express config defaults
 app.use(require('morgan')('dev'));
