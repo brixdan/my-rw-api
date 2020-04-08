@@ -32,7 +32,8 @@ if (!isProduction) {
   app.use(errorhandler());
 }
 
-if(isProduction){
+//if(isProduction){
+if(false){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
   mongoose.connect("mongodb://heroku_h7b0lnz7:hgg7b32j0tt15mi25h3hub4d2d@ds129402.mlab.com:29402/heroku_h7b0lnz7")
