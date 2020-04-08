@@ -16,7 +16,7 @@ var app = express();
 
 
 // good for local api, no good for heroku
-// app.use(cors());
+app.use(cors());
 
 // Normal express config defaults
 app.use(require('morgan')('dev'));
@@ -32,10 +32,11 @@ if (!isProduction) {
   app.use(errorhandler());
 }
 
-//if(isProduction){
-if(false){
+if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
+
+  //mongoose.connect('mongodb://localhost/conduit');
   mongoose.connect("mongodb://heroku_h7b0lnz7:hgg7b32j0tt15mi25h3hub4d2d@ds129402.mlab.com:29402/heroku_h7b0lnz7")
   mongoose.set('debug', true);
 }
