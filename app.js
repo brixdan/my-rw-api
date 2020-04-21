@@ -9,7 +9,7 @@ var http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
-process.env.NODE_ENV = "develop"  // bd todo later
+//process.env.NODE_ENV = "develop"  // bd todo later
 var isProduction = process.env.NODE_ENV === 'production';
 
 console.log('process.env.NODE_ENV=',process.env.NODE_ENV)
@@ -35,11 +35,12 @@ if (!isProduction) {
 }
 
 if(isProduction){
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGOLAB_SILVER_URI, { useNewUrlParser: true })
 } else {
 
-  //mongoose.connect('mongodb://localhost/conduit');
-  mongoose.connect("mongodb://heroku_h7b0lnz7:hgg7b32j0tt15mi25h3hub4d2d@ds129402.mlab.com:29402/heroku_h7b0lnz7")
+//  mongoose.connect('mongodb://localhost/conduit',{ useNewUrlParser: true } );
+//  mongoose.connect("mongodb://heroku_h7b0lnz7:hgg7b32j0tt15mi25h3hub4d2d@ds129402.mlab.com:29402/heroku_h7b0lnz7")
+ mongoose.connect(process.env.MONGOLAB_SILVER_URI, { useNewUrlParser: true })
   mongoose.set('debug', true);
 }
 
