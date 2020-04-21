@@ -9,7 +9,7 @@ var http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
-//process.env.NODE_ENV = "develop"  // bd todo later
+process.env.NODE_ENV = "develop"  // bd todo later
 var isProduction = process.env.NODE_ENV === 'production';
 
 console.log('process.env.NODE_ENV=',process.env.NODE_ENV)
