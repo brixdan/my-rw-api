@@ -57,3 +57,6 @@ Requests are authenticated using the `Authorization` header with a valid JWT. We
 mongodb+srv://<username>:<password>@my-atlas-cluster-mdyjt.mongodb.net/test?retryWrites=true&w=majority
 - **Standard Connection String Format**
 mongodb://<username>:<password>@my-atlas-cluster-shard-00-00-mdyjt.mongodb.net:27017,my-atlas-cluster-shard-00-01-mdyjt.mongodb.net:27017,my-atlas-cluster-shard-00-02-mdyjt.mongodb.net:27017/test?ssl=true&replicaSet=my-atlas-cluster-shard-0&authSource=admin&retryWrites=true&w=majority
+### Отключить cors для удалёнки:
+// good for local api, no good for heroku
+app.use(cors()); in app.js in
