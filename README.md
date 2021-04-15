@@ -52,7 +52,6 @@ Requests are authenticated using the `Authorization` header with a valid JWT. We
 [![Brought to you by Thinkster](https://raw.githubusercontent.com/gothinkster/realworld/master/media/end.png)](https://thinkster.io)
 
 ### Atlas connection string
-- mongodb+srv://brixdan:MOz0x9c8v7@cluster1-4brtq.mongodb.net/conduit?retryWrites=true&w=majority
 - **DNS Seedlist Connection String Format**
 mongodb+srv://<username>:<password>@my-atlas-cluster-mdyjt.mongodb.net/test?retryWrites=true&w=majority
 - **Standard Connection String Format**
