@@ -16,18 +16,6 @@
             "script": {
               "type": "text/javascript",
               "exec": [
-                "if (!(environment.isIntegrationTest)) {",
-                "var responseJSON = JSON.parse(responseBody);",
-                "",
-                "tests['Response contains \"user\" property'] = responseJSON.hasOwnProperty('user');",
-                "",
-                "var user = responseJSON.user || {};",
-                "",
-                "tests['User has \"email\" property'] = user.hasOwnProperty('email');",
-                "tests['User has \"username\" property'] = user.hasOwnProperty('username');",
-                "tests['User has \"token\" property'] = user.hasOwnProperty('token');",
-                "}",
-                ""
               ]
             }
           }],
