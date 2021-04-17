@@ -18,7 +18,11 @@ var app = express();
 
 
 // good for local api, no good for heroku
-app.use(cors());
+var corsOptions = {
+  origin: true,
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions));
 
 // Normal express config defaults
 app.use(require('morgan')('dev'));
